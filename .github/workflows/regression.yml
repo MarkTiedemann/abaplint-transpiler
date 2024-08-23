@@ -26,10 +26,14 @@ jobs:
         node-version: 22
 
     - name: Regression
+      env:
+        NODE_OPTIONS: --experimental-sqlite
       run: |
         node .github/regression/regression.js
 
     - name: Performance
+      env:
+        NODE_OPTIONS: --experimental-sqlite
       run: |
         cp .github/regression/performance.js ../../performance.js
         npm run install && npm run link-local && npm run performance

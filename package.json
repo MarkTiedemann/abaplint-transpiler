@@ -27,6 +27,7 @@
     },
     "mocha": {
         "recursive": true,
+        "reporter": "progress",
         "spec": [
             "packages/*/build/test/**/*.js",
             "build/test/**/*.js"
