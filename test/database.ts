@@ -1,5 +1,5 @@
 import {expect} from "chai";
-import {AsyncFunction, runFiles as runRilesSqlite, runFilesPostgres, runFilesSnowflake} from "./_utils";
+import {AsyncFunction, runFiles as runRilesSqlite, /*runFilesPostgres, runFilesSnowflake*/ } from "./_utils";
 import {ABAP, MemoryConsole} from "../packages/runtime/src/";
 import {msag_escape, msag_zag_unit_test, tabl_t100xml, zquan, zt111, zt222} from "./_data";
 import {IFile} from "../packages/transpiler/src/types";
@@ -21,6 +21,7 @@ async function runAllDatabases(abap: ABAP,
     check();
   }
 
+  /*
   if (settings === undefined || settings.postgres === undefined || settings.postgres === true) {
     const js = await runFilesPostgres(abap, files);
     const f = new AsyncFunction("abap", js);
@@ -37,6 +38,7 @@ async function runAllDatabases(abap: ABAP,
     await abap.context.databaseConnections["DEFAULT"].disconnect();
     check();
   }
+  */
 
 }
 

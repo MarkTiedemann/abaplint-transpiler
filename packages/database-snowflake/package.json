@@ -23,7 +23,7 @@
   "devDependencies": {
     "@abaplint/runtime": "^2.7.101",
     "@types/snowflake-sdk": "^1.6.14",
-    "@types/node": "^20.7.1",
+    "@types/node": "^22.5.0",
     "typescript": "^5.2.2"
   }
 }

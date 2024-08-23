@@ -274,7 +274,7 @@ export async function setup(abap, schemas, insert) {
       `import runtime from "../../packages/runtime/build/src/index.js";`);
     fs.writeFileSync(outputFolder + path.sep + "init.mjs", output.initializationScript);
 
-    const buf = childProcess.execSync("node unit-test/" + name + "/index.mjs");
+    const buf = childProcess.execSync("node --experimental-sqlite unit-test/" + name + "/index.mjs");
     return buf.toString();
   }
 
